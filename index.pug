@@ -10,7 +10,6 @@ html(dir="rtl" lang="ar")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous")
         title We Real Estate
 body 
-    div(class="overlay main")
     .nav-div 
         .logo
             img(src="imgs/logo_4_11zon.jpeg", alt="") 
@@ -20,7 +19,6 @@ body
                 each val in ['الرئيسية','خدماتنا','من نحن','تواصل معنا']
                     li: a(href=`#${val}` data-link=val)=val
     div(class="home",id="الرئيسية")
-        .overlay
         .home-content 
             h1 WE Real Estate
             p WE هي شركة للتسويق العقاري و لبيع العقارات و الفيلل
@@ -35,8 +33,6 @@ body
                 .row
                     each val in [{img:'imgs/sr3_8_11zon.jpeg' ,title:'المنى جاردنز',desc:'مشروع المني جاردنز بمنطقة المني فيلل فخمة بحمام سباحة',link:'imgs/ALMUNA-GARDENS-BROCHUREcompressed-1compressed-1.pdf'},{img:'imgs/sr2_7_11zon.jpeg',title:'زين العذيبه ',desc:'شقق فخمة بمنطقة العذيبة',link:'imgs/brochure-3compressed.pdf'},{img:"imgs/sr1_6_11zon.jpeg",title:"مروج الزين",desc:' شقق للبيع فى منطقه صلاله',link:'imgs/MUROOJ-ZAIN-Bro1.pdf'},{img:'imgs/bb3_1_11zon.jpeg',title:'قطعه ارض للبيع',desc:'قطعه ارض للبيع - فى منطقه الخوير ',link:'imgs/CamScanner-10-04-2020-15.05.50.pdf'},{img:'imgs/بهجة_12.jpeg',title:'بهجه العذيبه بمنطقه العذيبه',desc:'شقق بمنطقه العذيبه وتم بيع 98 % من المشروع',link:'imgs/portfolio-1.pdf'},{img:'imgs/جبال_13.jpeg',title:'جبال بمنطقه بوشر مسجد محمد الامين',desc:'شقق بمنطقه بوشر تم بيع 95 % من الشقق وبها تمللك للاجانب',link:'imgs/portfolio-3.pdf'}]
                         .col-md-12.srv-box
-                            .overlay
-                                i(class="fa-solid fa-video")
                             img(src=val.img, alt="")
                             .srv-box-content 
                                 h4= val.title
