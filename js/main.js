@@ -10,9 +10,9 @@ navItems.forEach(item =>{
 })
 
 //popup
-let vidIcon = Array.from(document.querySelectorAll(".fa-video"));
+let vidIcon = Array.from(document.querySelectorAll(".video"));
 
-let vids = ['../imgs/المني جاردنز.mp4','../imgs/زين العذبيية.mp4','../imgs/مروج الزين.mp4']
+let vids = ['imgs/المني جاردنز.mp4','imgs/زين العذبيية.mp4','imgs/مروج الزين.mp4']
 
 let links = ['https://drive.google.com/file/d/1AcNN4-7AFU0YBIr0f4gXQZPN4NgMopxK/view?usp=sharing','https://drive.google.com/file/d/1Ru7oEbXsmyxgmiTvWU6X0ptlwWeqWxnp/view?usp=sharing','https://drive.google.com/file/d/1PaqVr5Qzjx2vLZrUm6vl0oh4TegUi70x/view?usp=sharing','https://drive.google.com/file/d/19x10w6tkzTAj8m93NtObUZ5gUJwxxB0v/view?usp=sharing','https://drive.google.com/file/d/1FfAeOgvNJM1QL4p65Cx-aHqSrwVvtsI0/view?usp=sharing','https://drive.google.com/file/d/1cvFJQmzcdSFlEB7MZhQ29FoBrMraC-wE/view?usp=sharing'];
 

@@ -8,6 +8,7 @@
     background: #fff;
     margin: 0;
     padding: 20px 70px;
+    flex-direction: row;
     .logo{
         img{
             width: 114px;
@@ -61,6 +62,7 @@
         @media screen and (max-width:600px) {
             width: 100%;
             display: none;
+        
             .fa-xmark{
                 display: block;
             }
@@ -77,6 +79,7 @@
         }
     }
     @media screen and (max-width:600px) {
+        padding: 10px 43px;
         .fa-bars{
             display: block;
         }
@@ -265,6 +268,13 @@
                     color: #84247D;
                     font-weight: 600;
                 }
+            }
+        }
+        .srv-box-links{
+            display: flex;
+            justify-content: space-between;
+            a{
+                cursor: pointer;
             }
         }
     }
