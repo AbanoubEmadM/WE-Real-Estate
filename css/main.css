@@ -33,6 +33,7 @@ a {
   background: #fff;
   margin: 0;
   padding: 20px 70px;
+  flex-direction: row;
 }
 .nav-div .logo img {
   width: 114px;
@@ -97,6 +98,9 @@ a {
   margin-bottom: 25px;
 }
 @media screen and (max-width: 600px) {
+  .nav-div {
+    padding: 10px 43px;
+  }
   .nav-div .fa-bars {
     display: block;
   }
@@ -270,6 +274,13 @@ a {
     color: #84247D;
     font-weight: 600;
   }
+}
+.services .srv-box .srv-box-links {
+  display: flex;
+  justify-content: space-between;
+}
+.services .srv-box .srv-box-links a {
+  cursor: pointer;
 }
 
 .about {
