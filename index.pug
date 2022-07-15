@@ -19,6 +19,7 @@ body
                 each val in ['الرئيسية','خدماتنا','من نحن','تواصل معنا']
                     li: a(href=`#${val}` data-link=val)=val
     div(class="home",id="الرئيسية")
+        .overlay
         .home-content 
             h1 WE Real Estate
             p WE هي شركة للتسويق العقاري و لبيع العقارات و الفيلل
