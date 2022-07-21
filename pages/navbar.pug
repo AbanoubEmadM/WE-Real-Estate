@@ -1,0 +1,10 @@
+.nav-div 
+    .logo
+        block logo
+            a(href="index.html")
+                img(src="imgs/logo_4_11zon.jpeg", alt="") 
+    i.fa-solid.fa-bars
+    .nav-items
+        ul 
+            each val in ['الرئيسية','خدماتنا','من نحن','تواصل معنا']
+                li: a(href=`#${val}` data-link=val)=val

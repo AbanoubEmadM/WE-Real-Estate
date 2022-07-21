@@ -110,6 +110,12 @@ let logo = document.querySelector(".logo");
 let closeI = document.createElement("i");
 closeI.className = 'fa-solid fa-xmark';
 
+function closeNav() {
+    navItemsDiv.classList.remove('active');
+    logo.classList.remove('hidden');
+    barsIcon.classList.remove("hidden");
+}
+
 barsIcon.addEventListener("click",()=>{
     //add active to show nav
     navItemsDiv.classList.add('active');
@@ -117,11 +123,36 @@ barsIcon.addEventListener("click",()=>{
     barsIcon.classList.add("hidden");
     navItemsDiv.appendChild(closeI);
 
-    //close icon to remove active from nav
     closeI.addEventListener("click",()=>{
-        navItemsDiv.classList.remove('active');
-        logo.classList.remove('hidden');
-        barsIcon.classList.remove("hidden");
-    
+        closeNav()
     });
+
+    //close icon to remove active from nav
+    navItems.forEach(link => {
+        link.addEventListener("click",() =>  {
+            closeNav()
+        })
+    })
 });
+let allSections = document.querySelectorAll(".section")
+
+window.onscroll = () => {
+    let current = ''
+    allSections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if(window.scrollY > sectionTop - 200){
+            current = section.getAttribute("id");
+        }
+    })
+    navItems.forEach(li => {
+        let currentData = li.dataset.link
+        if(currentData === current){
+            console.log(currentData);
+            navItems.forEach(li => {
+                li.classList.remove('active')
+            })
+        
+            li.classList.add('active')
+        }
+    })
+}
